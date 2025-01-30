@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@import './theme.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+  font-family: 'Gilroy-Regular', sans-serif;
+}
+
+body {
+  background: var(--neutral-0);
+  color: var(--neutral-100);
+}
+
+a:hover,
+button:hover {
+  transition: all 0.3s ease-in-out;
+}

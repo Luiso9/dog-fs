@@ -1,0 +1,255 @@
+@font-face {
+  font-family: 'Gilroy-Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gilroy-Bold'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gilroy-Heavy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gilroy-Heavy'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Heavy.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gilroy-Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gilroy-Light'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gilroy-Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gilroy-Medium'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gilroy-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gilroy-Regular'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Regular.woff') format('woff');
+}
+
+:root {
+  /* Primary Colors */
+  --primary-100: #003459;
+  --primary-80: #002a48;
+  --primary-60: #00528c;
+  --primary-40: #0078cd;
+
+  /* Secondary Colors */
+  --secondary-100: #f7dba7;
+  --secondary-80: #eec77e;
+  --secondary-60: #f1d092;
+  --secondary-40: #fceed5;
+
+  /* State Colors */
+  --state-pink: #ff564f;
+  --state-green: #34c759;
+  --state-orange: #ff912c;
+  --state-blue: #00a7e7;
+
+  /* Neutral Colors */
+  --neutral-100: #00171f;
+  --neutral-80: #242b33;
+  --neutral-60: #667479;
+  --neutral-40: #99a2a5;
+  --neutral-20: #ccd1d2;
+  --neutral-10: #ebeeef;
+  --neutral-0: #fdfdfd;
+
+  /* Font Sizes */
+  --font-3xs: 0.5rem;
+  --font-2xs: 0.625rem;
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 1.5rem;
+  --font-2xl: 1.75rem;
+  --font-3xl: 2.25rem;
+  --font-4xl: 2.875rem;
+
+  /* Font Family */
+  --font-svn-gilroy: 'Gilroy', sans-serif;
+
+  /* Shadows */
+  --shadow-1: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+
+  /* Border Radius */
+  --rounded-10: 0.2244rem;
+  --rounded-20: 0.3125rem;
+  --rounded-30: 0.4488rem;
+  --rounded-40: 0.5666rem;
+  --rounded-50: 0.7228rem;
+  --rounded-60: 0.875rem;
+  --rounded-65: 1rem;
+  --rounded-80: 1.5781rem;
+  --rounded-100: 2.9264rem;
+  --rounded-120: 6.0734rem;
+}
+
+/* Background Colors */
+.bg-primary-100 {
+  background-color: var(--primary-100);
+}
+.bg-primary-80 {
+  background-color: var(--primary-80);
+}
+.bg-primary-60 {
+  background-color: var(--primary-60);
+}
+.bg-primary-40 {
+  background-color: var(--primary-40);
+}
+
+.bg-secondary-100 {
+  background-color: var(--secondary-100);
+}
+.bg-secondary-80 {
+  background-color: var(--secondary-80);
+}
+.bg-secondary-60 {
+  background-color: var(--secondary-60);
+}
+.bg-secondary-40 {
+  background-color: var(--secondary-40);
+}
+
+.bg-state-pink {
+  background-color: var(--state-pink);
+}
+.bg-state-green {
+  background-color: var(--state-green);
+}
+.bg-state-orange {
+  background-color: var(--state-orange);
+}
+.bg-state-blue {
+  background-color: var(--state-blue);
+}
+
+.bg-neutral-100 {
+  background-color: var(--neutral-100);
+}
+.bg-neutral-80 {
+  background-color: var(--neutral-80);
+}
+.bg-neutral-60 {
+  background-color: var(--neutral-60);
+}
+.bg-neutral-40 {
+  background-color: var(--neutral-40);
+}
+.bg-neutral-20 {
+  background-color: var(--neutral-20);
+}
+.bg-neutral-10 {
+  background-color: var(--neutral-10);
+}
+.bg-neutral-0 {
+  background-color: var(--neutral-0);
+}
+
+/* Text Colors */
+.text-primary-100 {
+  color: var(--primary-100);
+}
+.text-primary-80 {
+  color: var(--primary-80);
+}
+.text-primary-60 {
+  color: var(--primary-60);
+}
+.text-primary-40 {
+  color: var(--primary-40);
+}
+
+.text-secondary-100 {
+  color: var(--secondary-100);
+}
+.text-secondary-80 {
+  color: var(--secondary-80);
+}
+.text-secondary-60 {
+  color: var(--secondary-60);
+}
+.text-secondary-40 {
+  color: var(--secondary-40);
+}
+
+.text-state-pink {
+  color: var(--state-pink);
+}
+.text-state-green {
+  color: var(--state-green);
+}
+.text-state-orange {
+  color: var(--state-orange);
+}
+.text-state-blue {
+  color: var(--state-blue);
+}
+
+.text-neutral-100 {
+  color: var(--neutral-100);
+}
+.text-neutral-80 {
+  color: var(--neutral-80);
+}
+.text-neutral-60 {
+  color: var(--neutral-60);
+}
+.text-neutral-40 {
+  color: var(--neutral-40);
+}
+.text-neutral-20 {
+  color: var(--neutral-20);
+}
+.text-neutral-10 {
+  color: var(--neutral-10);
+}
+.text-neutral-0 {
+  color: var(--neutral-0);
+}
+
+/* Shadows */
+.shadow-1 {
+  box-shadow: var(--shadow-1);
+}
+
+/* Font */
+.font-svn-gilroy {
+  font-family: var(--font-svn-gilroy);
+}
+
+/* Border Radius */
+.rounded-10 {
+  border-radius: var(--rounded-10);
+}
+.rounded-20 {
+  border-radius: var(--rounded-20);
+}
+.rounded-30 {
+  border-radius: var(--rounded-30);
+}
+.rounded-40 {
+  border-radius: var(--rounded-40);
+}
+.rounded-50 {
+  border-radius: var(--rounded-50);
+}
+.rounded-60 {
+  border-radius: var(--rounded-60);
+}
+.rounded-65 {
+  border-radius: var(--rounded-65);
+}
+.rounded-80 {
+  border-radius: var(--rounded-80);
+}
+.rounded-100 {
+  border-radius: var(--rounded-100);
+}
+.rounded-120 {
+  border-radius: var(--rounded-120);
+}
