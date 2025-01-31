@@ -4,7 +4,7 @@
       inputProps.label
     }}</label>
     <div
-      class="flex items-center border border-[var(--neutral-40)] w-full max-w-[400px] max-h-[48px] rounded-lg"
+      class="flex items-center border border-[var(--neutral-40)] w-full max-h-[48px] rounded-lg"
     >
       <input
         :type="inputType"

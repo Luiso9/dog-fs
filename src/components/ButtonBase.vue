@@ -1,7 +1,7 @@
 <template>
   <button
     :class="[
-      'inline-flex items-center justify-center text-base rounded-full min-h-[48px] transition-transform duration-300 ease-in-out',
+      'inline-flex items-center justify-center text-base rounded-full max-h-[48px] max-w-fit transition-transform duration-300 ease-in-out',
       btnProps.iconOnly ? 'w-12 h-12' : 'px-7 py-3.5',
       btnProps.intent === 'primary'
         ? 'bg-primary-100 text-neutral-0 hover:cursor-pointer'
