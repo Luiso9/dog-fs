@@ -1,25 +1,25 @@
 <template>
   <div class="p-10" ref="dropdownRef">
-    <div class="dropdown inline-block relative leading-5 max-w-[200px]">
+    <div class="dropdown relative inline-block max-w-[200px] leading-5">
       <button
-        class="w-auto max-h-[88px] pl-5 pr-3 py-2 border-none rounded-full bg-white flex items-center justify-around cursor-pointer focus:border-[#00A7E7]"
+        class="flex max-h-[88px] w-auto cursor-pointer items-center justify-around rounded-full border-none bg-white py-2 pr-3 pl-5 focus:border-[#00A7E7]"
         @click="toggleDropdown"
       >
         <span class="truncate">{{ selectedLabel }}</span>
         <component
           :is="isOpen ? ChevronUpIcon : ChevronDownIcon"
-          class="size-3 mx-1 font-bold transition-transform duration-200"
+          class="mx-1 size-3 font-bold transition-transform duration-200"
         />
       </button>
 
       <ul
         v-if="isOpen"
-        class="dropdown-menu rounded-2xl absolute z-10 w-full mt-1.5 bg-white border-[1px] border-[#CCD1D2] shadow-lg text-sm"
+        class="dropdown-menu absolute z-10 mt-1.5 w-full rounded-2xl border-[1px] border-[#CCD1D2] bg-white text-sm shadow-lg"
       >
         <li
           v-for="option in options"
           :key="option.value"
-          class="cursor-pointer hover:bg-[#EBEEEF] first:rounded-t-2xl last:rounded-b-2xl hover:text-[#00171f] pt-2.5 pb-2 pl-5"
+          class="cursor-pointer pt-2.5 pb-2 pl-5 first:rounded-t-2xl last:rounded-b-2xl hover:bg-[#EBEEEF] hover:text-[#00171f]"
           :class="{ 'bg-primary-100 text-neutral-0': option.value === selected }"
           @click="selectOption(option)"
         >

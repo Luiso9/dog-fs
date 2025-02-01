@@ -1,11 +1,11 @@
 <template>
-  <nav class="hidden md:block lg:block md:w-full lg:w-full gap-2">
-    <div class="flex flex-row justify-around items-center">
+  <nav class="mx-auto hidden gap-2 md:block md:w-full lg:block lg:w-full">
+    <div class="mx-auto flex flex-row items-center justify-around">
       <ul
-        class="flex items-center gap-12 flex-row font-bold text-primary-80 cursor-pointer leading-6"
+        class="text-primary-80 z-10 flex cursor-pointer flex-row items-center gap-12 leading-6 font-bold"
       >
         <a href="/">
-          <img src="@/assets/perikanan/Frame.svg" alt="" />
+          <img src="@/assets/perikanan/Frame.svg" alt="" class="h-auto w-full max-w-lg" />
         </a>
         <li>Home</li>
         <li @mouseover="active = true" @mouseleave="active = false">
@@ -42,7 +42,7 @@
         </DropDown>
       </div>
       <!-- Icon Ony -->
-      <div class="inline-flex items-center gap-2 lg:hidden w-auto h-auto p-8">
+      <div class="mx-auto inline-flex h-auto w-auto items-center gap-2 p-8 md:flex lg:hidden">
         <MagnifyingGlassIcon class="size-5" />
         <HeartIcon class="size-5" />
         <ShoppingCartIcon class="size-5" />
@@ -53,9 +53,9 @@
 
 <script setup>
 import { MagnifyingGlassIcon, HeartIcon, ShoppingCartIcon } from '@heroicons/vue/24/outline'
-import ButtonBase from './ButtonBase.vue'
+import ButtonBase from '../base/ButtonBase.vue'
 import MegaMenu from './MegaMenu.vue'
-import DropDown from './DropDown.vue'
+import DropDown from '../ui/DropDown.vue'
 import { ref } from 'vue'
 const selectedValue = ref('vnd')
 const handleDropdownChange = (value) => {

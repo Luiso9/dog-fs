@@ -1,14 +1,14 @@
 <template>
   <button
+    class="group z-20 inline-flex max-h-[48px] max-w-auto items-center justify-center rounded-full text-base transition-transform duration-300 ease-in-out hover:cursor-pointer"
     :class="[
-      'inline-flex items-center justify-center text-base rounded-full max-h-[48px] max-w-fit transition-transform duration-300 ease-in-out',
-      btnProps.iconOnly ? 'w-12 h-12' : 'px-7 py-3.5',
+      btnProps.iconOnly ? 'h-12 w-12' : 'px-7 py-3.5',
       btnProps.intent === 'primary'
-        ? 'bg-primary-100 text-neutral-0 hover:cursor-pointer'
+        ? 'bg-primary-100 text-neutral-0 group-hover:bg-primary-60'
         : btnProps.intent === 'disabled'
-          ? 'bg-neutral-20 text-neutral-60 hover:cursor-not-allowed'
+          ? 'bg-neutral-20 text-neutral-60 cursor-not-allowed'
           : btnProps.intent === 'text'
-            ? 'bg-transparent border-1 border-primary-100 text-primary-100 hover:cursor-pointer'
+            ? 'border-primary-100 text-primary-100 border bg-none group-hover:bg-[var(--primary-60)] group-hover:text-[var(--neutral-10)]'
             : 'bg-black',
     ]"
     :disabled="btnProps.intent === 'disabled'"
@@ -31,7 +31,7 @@
     <component
       :is="btnProps.leftIcon"
       :class="[
-        'w-6 h-6',
+        'h-6 w-6',
         btnProps.iconOnly ? '' : 'mr-2',
         btnProps.loading ? 'invisible' : 'opacity-100',
       ]"
@@ -45,7 +45,7 @@
     <component
       :is="btnProps.rightIcon"
       :class="[
-        'w-6 h-6',
+        'h-6 w-6',
         btnProps.iconOnly ? '' : 'ml-2',
         btnProps.loading ? 'invisible' : 'opacity-100',
       ]"

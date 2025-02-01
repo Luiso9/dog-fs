@@ -1,15 +1,15 @@
 <template>
-  <label class="flex items-center cursor-pointer gap-2">
-    <div class="relative w-5 h-5">
+  <label class="flex cursor-pointer items-center gap-2">
+    <div class="relative h-5 w-5">
       <input
         type="radio"
         :checked="radioProps.checked"
         :disabled="radioProps.disabled"
         @change="handleChange"
-        class="peer absolute inset-0 w-full h-full appearance-none border-[1px] border-[#667479] rounded-full bg-transparent focus:outline-none focus:ring-0 checked:bg-[#003459] checked:border-[#003459] disabled:border-[#99a2a5] disabled:bg-[#ccd1d2]"
+        class="peer absolute inset-0 h-full w-full appearance-none rounded-full border-[1px] border-[#667479] bg-transparent checked:border-[#003459] checked:bg-[#003459] focus:ring-0 focus:outline-none disabled:border-[#99a2a5] disabled:bg-[#ccd1d2]"
       />
       <div
-        class="size-2.5 bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden peer-checked:block pointer-events-none"
+        class="pointer-events-none absolute top-1/2 left-1/2 hidden size-2.5 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-white peer-checked:block"
       ></div>
     </div>
     <span class="text-neutral-80" :class="{ 'text-neutral-60': radioProps.disabled }">

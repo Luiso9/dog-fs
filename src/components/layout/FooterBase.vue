@@ -1,25 +1,25 @@
 <template>
   <footer
-    class="flex items-center justify-center mx-auto bg-gradient-to-r from-[#FCEED5] via-[#FCEED5] to-[#FFE7BA] w-screen h-full max-h-[440px]"
+    class="mx-auto flex h-full max-h-[440px] w-screen items-center justify-center bg-gradient-to-r from-[#FCEED5] via-[#FCEED5] to-[#FFE7BA]"
   >
     <div class="top_layer pt-20 pb-10">
       <div
-        class="card-banner flex flex-row items-center justify-center bg-primary-100 rounded-2xl p-8"
+        class="card-banner bg-primary-100 flex flex-row items-center justify-center rounded-2xl p-8"
       >
         <div class="group_1 w-[400px]">
-          <span class="text-2xl font-bold text-neutral-0 antialiased text-left"
+          <span class="text-neutral-0 text-left text-2xl font-bold antialiased"
             >Register now so you don't miss our programs</span
           >
         </div>
         <div
-          class="group_2 inline-flex items-center gap-3 max-w-[707px] max-h-[72px] bg-white p-3 rounded-[14px]"
+          class="group_2 inline-flex max-h-[72px] max-w-[707px] items-center gap-3 rounded-[14px] bg-white p-3"
         >
-          <InputFields :placeholder="'Enter your email'" class="w-full h-full" />
-          <ButtonBase class="rounded-lg w-full h-auto">Subscribe Now</ButtonBase>
+          <InputFields :placeholder="'Enter your email'" class="h-full w-full" />
+          <ButtonBase class="h-auto w-full rounded-lg">Subscribe Now</ButtonBase>
         </div>
       </div>
 
-      <div class="mid_l flex flex-row justify-between py-10 text-neutral-100 leading-6">
+      <div class="mid_l flex flex-row justify-between py-10 leading-6 text-neutral-100">
         <ul class="inline-flex items-center gap-10 text-base">
           <li>Home</li>
           <li>Category</li>
@@ -36,8 +36,8 @@
 
       <hr class="text-neutral-60" />
 
-      <div class="finale flex justify-between pt-10 w-full text-neutral-100 leading-6">
-        <ul class="inline-flex gap-52 text-neutral-60 text-sm">
+      <div class="finale flex w-full justify-between pt-10 leading-6 text-neutral-100">
+        <ul class="text-neutral-60 inline-flex gap-52 text-sm">
           <li>© 2022 Monito. All rights reserved.</li>
           <img src="@/assets/perikanan/frame.svg" alt="" />
           <li>Terms of Service <span class="ml-3"> Privacy Policy </span></li>
@@ -48,7 +48,7 @@
 </template>
 
 <script setup>
-import InputFields from './InputFields.vue'
-import ButtonBase from './ButtonBase.vue'
+import InputFields from '../base/InputFields.vue'
+import ButtonBase from '../base/ButtonBase.vue'
 import { MoonIcon } from '@heroicons/vue/24/solid'
 </script>

@@ -1,21 +1,19 @@
 <template>
   <div class="relative">
-    <label v-if="inputProps.label" class="block mb-2.5 text-neutral-40">{{
+    <label v-if="inputProps.label" class="text-neutral-40 mb-2.5 block">{{
       inputProps.label
     }}</label>
-    <div
-      class="flex items-center border border-[var(--neutral-40)] w-full max-h-[48px] rounded-lg"
-    >
+    <div class="flex max-h-[48px] w-full items-center rounded-lg border border-[var(--neutral-40)]">
       <input
         :type="inputType"
         :placeholder="inputProps.placeholder"
         v-model="sanitizedInput"
-        class="px-6 py-3.5 rounded-lg text-neutral-60 w-full max-w-[400px] max-h-[48px] focus:outline-none"
+        class="text-neutral-60 max-h-[48px] w-full max-w-[400px] rounded-lg px-6 py-3.5 focus:outline-none"
         :class="inputProps.rightIcon ? 'pr-4' : ''"
       />
       <component
         :is="currentIcon"
-        class="size-6 w-6 h-6 mr-4 ml-2.5 text-neutral-60 cursor-pointer"
+        class="text-neutral-60 mr-4 ml-2.5 size-6 h-6 w-6 cursor-pointer"
         v-if="showIcon"
         @click="togglePasswordVisibility"
       />
@@ -25,11 +23,11 @@
       class="text-state-pink mt-2 inline-flex items-center text-xs"
       style="margin-top: 10px"
     >
-      <ExclamationCircleIcon class="size-4.5 mr-1" /> {{ errorMessage }}
+      <ExclamationCircleIcon class="mr-1 size-4.5" /> {{ errorMessage }}
     </div>
     <div
       v-if="inputProps.desc"
-      class="text-neutral-40 mt-2 text-left break-words whitespace-normal w-full max-w-[400px] max-h-[48px] text-xs"
+      class="text-neutral-40 mt-2 max-h-[48px] w-full max-w-[400px] text-left text-xs break-words whitespace-normal"
       style="margin-top: 10px"
     >
       <span>{{ inputProps.desc }}</span>
