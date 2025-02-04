@@ -35,7 +35,7 @@
           class="finale flex w-full flex-col items-center justify-center pt-10 leading-6 text-neutral-100"
         >
           <ul class="text-neutral-60 flex flex-col items-center justify-center text-sm">
-            <img src="@/assets/perikanan/frame.svg" alt="Logo" class="w-32" />
+            <img src="../../assets/perikanan/Frame.svg" alt="Logo" class="w-32" />
             <li class="pt-8 pb-2">Terms of Service <span> Privacy Policy </span></li>
             <li class="pb-5">© 2022 Monito. All rights reserved.</li>
           </ul>
