@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="absolute right-0 left-0 mx-auto my-8 max-h-fit w-fit justify-center rounded-xl bg-white drop-shadow-lg"
-  >
+  <div class="fixed top-15 left-30 mx-auto my-8 w-fit rounded-xl bg-white shadow-lg">
     <div class="container mx-auto">
       <div class="dog flex flex-row gap-16 px-10 py-[34px]">
         <div class="popul">
@@ -10,7 +8,7 @@
           </h2>
           <ul class="text-neutral-60 mt-2.5 grid grid-cols-2 text-sm">
             <li
-              v-for="dog in dogs.popular"
+              v-for="dog in popularDogs"
               :key="dog"
               class="bg-neutral-0 hover:bg-primary-100 mx-8 cursor-pointer rounded-lg leading-7"
             >
@@ -24,7 +22,7 @@
           </h2>
           <ul class="text-neutral-60 mt-2.5 grid grid-cols-1 text-sm">
             <li
-              v-for="dog in dogs.large"
+              v-for="dog in largeDogs"
               :key="dog"
               class="bg-neutral-0 hover:bg-primary-100 mx-8 cursor-pointer rounded-lg leading-7"
             >
@@ -38,7 +36,7 @@
           </h2>
           <ul class="text-neutral-60 mt-2.5 grid grid-cols-1 text-sm">
             <li
-              v-for="dog in dogs.small"
+              v-for="dog in smallDogs"
               :key="dog"
               class="bg-neutral-0 hover:bg-primary-100 mx-8 cursor-pointer rounded-lg leading-7"
             >
@@ -46,38 +44,40 @@
             </li>
           </ul>
         </div>
-
-        <div class="banner">
-          <img
-            src="@/assets/perikanan/adopthitler.svg"
-            alt="Advertisement"
-            loading="lazy"
-            class="w-auto sm:hidden"
-          />
-        </div>
+        <img
+          src="@/assets/perikanan/adopthitler.svg"
+          alt="Advertisement"
+          loading="lazy"
+          class="w-auto"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { ArrowRightIcon } from '@heroicons/vue/24/solid'
 import dogsData from '@/assets/perkapalan/dogs.js'
 
-const dogs = {
-  popular: dogsData.dogs
+const popularDogs = computed(() =>
+  dogsData.dogs
     .sort((a, b) => b.popularity - a.popularity)
     .slice(0, 12)
     .map((dog) => dog.name),
+)
 
-  large: dogsData.dogs
+const largeDogs = computed(() =>
+  dogsData.dogs
     .filter((dog) => dog.breed === 'Large')
     .slice(0, 6)
     .map((dog) => dog.name),
+)
 
-  small: dogsData.dogs
+const smallDogs = computed(() =>
+  dogsData.dogs
     .filter((dog) => dog.breed === 'Small')
     .slice(0, 6)
     .map((dog) => dog.name),
-}
+)
 </script>

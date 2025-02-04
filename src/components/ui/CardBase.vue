@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[
-      'bg-neutral-0 max-h-lg flex h-full flex-col justify-center rounded-xl border border-red-900 p-2 drop-shadow-lg',
+      'bg-neutral-0 max-h-lg z-10 flex h-full flex-col justify-center rounded-xl border border-red-900 p-2 drop-shadow-lg',
       widthClass,
     ]"
   >

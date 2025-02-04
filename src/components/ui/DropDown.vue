@@ -1,9 +1,10 @@
 <template>
-  <div class="p-10" ref="dropdownRef">
-    <div class="dropdown relative inline-block max-w-[200px] leading-5">
+  <div class="" ref="dropdownRef">
+    <div class="dropdown relative inline-block">
       <button
-        class="flex max-h-[88px] w-auto cursor-pointer items-center justify-around rounded-full border-none bg-white py-2 pr-3 pl-5 focus:border-[#00A7E7]"
+        class="flex w-auto cursor-pointer items-center justify-around rounded-full py-2 pr-3 pl-4 focus:border-[#00A7E7]"
         @click="toggleDropdown"
+        :class="borderClass"
       >
         <span class="truncate">{{ selectedLabel }}</span>
         <component
@@ -14,7 +15,7 @@
 
       <ul
         v-if="isOpen"
-        class="dropdown-menu absolute z-10 mt-1.5 w-full rounded-2xl border-[1px] border-[#CCD1D2] bg-white text-sm shadow-lg"
+        class="dropdown-menu absolute z-50 mt-1.5 w-full max-w-96 rounded-2xl border-[1px] border-[#CCD1D2] bg-white text-sm shadow-lg"
       >
         <li
           v-for="option in options"
@@ -44,6 +45,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  border: {
+    type: Boolean,
+    default: true,
+  },
 })
 
 const emit = defineEmits(['update:selected', 'change'])
@@ -54,6 +59,10 @@ const dropdownRef = ref(null)
 const selectedLabel = computed(() => {
   const selectedOption = props.options.find((option) => option.value === props.selected)
   return selectedOption ? selectedOption.label : 'Select an option'
+})
+
+const borderClass = computed(() => {
+  return props.border ? 'border border-[#ccd1d2]' : 'border-none'
 })
 
 const toggleDropdown = () => {
@@ -80,3 +89,9 @@ onUnmounted(() => {
   document.removeEventListener('click', handleClickOutside)
 })
 </script>
+
+<style scoped>
+ul {
+  z-index: 200;
+}
+</style>

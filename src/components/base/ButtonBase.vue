@@ -1,15 +1,19 @@
 <template>
   <button
-    class="group z-20 inline-flex max-h-[48px] max-w-auto items-center justify-center rounded-full text-base transition-transform duration-300 ease-in-out hover:cursor-pointer"
+    v-if="!btnProps.hidden"
+    class="group inline-flex max-h-[48px] max-w-auto items-center justify-center rounded-full text-base transition-transform duration-300 ease-in-out hover:cursor-pointer"
     :class="[
       btnProps.iconOnly ? 'h-12 w-12' : 'px-7 py-3.5',
-      btnProps.intent === 'primary'
-        ? 'bg-primary-100 text-neutral-0 group-hover:bg-primary-60'
-        : btnProps.intent === 'disabled'
-          ? 'bg-neutral-20 text-neutral-60 cursor-not-allowed'
-          : btnProps.intent === 'text'
-            ? 'border-primary-100 text-primary-100 border bg-none group-hover:bg-[var(--primary-60)] group-hover:text-[var(--neutral-10)]'
-            : 'bg-black',
+      {
+        'bg-primary-100 text-neutral-0 group-hover:bg-primary-60': btnProps.intent === 'primary',
+        'bg-neutral-20 text-neutral-60 cursor-not-allowed': btnProps.intent === 'disabled',
+        'border-primary-100 text-primary-100 border bg-none group-hover:bg-[var(--primary-60)] group-hover:text-[var(--neutral-10)]':
+          btnProps.intent === 'text',
+        'bg-black':
+          btnProps.intent !== 'primary' &&
+          btnProps.intent !== 'disabled' &&
+          btnProps.intent !== 'text',
+      },
     ]"
     :disabled="btnProps.intent === 'disabled'"
   >
@@ -27,7 +31,6 @@
         fill="white"
       />
     </svg>
-
     <component
       :is="btnProps.leftIcon"
       :class="[
@@ -37,11 +40,9 @@
       ]"
       v-if="!btnProps.loading"
     />
-
     <span :class="['transition-opacity', btnProps.loading ? 'invisible' : 'opacity-100']">
       <slot />
     </span>
-
     <component
       :is="btnProps.rightIcon"
       :class="[
@@ -65,6 +66,10 @@ const btnProps = defineProps({
     default: 'primary',
   },
   iconOnly: Boolean,
+  hidden: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
@@ -77,6 +82,12 @@ const btnProps = defineProps({
 @keyframes spinner_svv2 {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hidden-on-small-screen {
+    display: none;
   }
 }
 </style>

@@ -29,8 +29,8 @@
         v-if="cardProps.label"
         class="bg-secondary-40 flex w-auto items-center rounded-lg px-2.5 py-2.5 text-neutral-100"
       >
-        <component class="mr-2 size-5" :is="cardProps.label.icon"></component>
-        <span class="mr-2">•</span>
+        <img src="../../assets/perikanan/gift.svg" alt="Gift Icon" />
+        <span class="mx-2">•</span>
         <span class="font-[Gilroy-Bold] text-sm">{{ cardProps.label.text }}</span>
       </div>
     </div>

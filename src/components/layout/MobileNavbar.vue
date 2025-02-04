@@ -13,3 +13,9 @@
 <script setup>
 import { Bars3Icon, MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
 </script>
+
+<style scoped>
+* {
+  z-index: 999;
+}
+</style>

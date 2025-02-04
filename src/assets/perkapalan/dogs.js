@@ -12,8 +12,7 @@ const dogsData = {
   dogs: [
     {
       name: 'Buddy',
-      image:
-        'https://media.discordapp.net/attachments/809988356611112980/1334952032808730776/image.png?ex=679e6676&is=679d14f6&hm=b31e5d398da7991ad48de24eb8174155c75f3dfb88d0518ebf7cd70855533cc8&=&width=270&height=270',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1200,
@@ -22,8 +21,7 @@ const dogsData = {
     },
     {
       name: 'Luna',
-      image:
-        'https://media.discordapp.net/attachments/809988356611112980/1334951309840875560/image.png?ex=679e65ca&is=679d144a&hm=2ec3dd98895a46425ec7f96986fff839f194f9b1aa0cd86030909ad750201847&=&width=270&height=270',
+      image: '',
       gender: 'Female',
       color: 'Apricot',
       price: 1500,
@@ -32,8 +30,7 @@ const dogsData = {
     },
     {
       name: 'Max',
-      image:
-        'https://media.discordapp.net/attachments/809988356611112980/1334952059354742904/image.png?ex=679e667d&is=679d14fd&hm=8409218680b3b9a4d4e23d55400934bb097b588e7311eefe04de4332ac5fab46&=&width=270&height=270',
+      image: '',
       gender: 'Male',
       color: 'Red',
       price: 1000,
@@ -42,8 +39,7 @@ const dogsData = {
     },
     {
       name: 'Bella',
-      image:
-        'https://cdn.discordapp.com/attachments/809988356611112980/1334952483377643632/image.png?ex=679e66e2&is=679d1562&hm=256ad66eae5a1f73d17b3d4e509227112f4128494a8b4dd68a973558c96cb0f8&',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1300,
@@ -52,8 +48,7 @@ const dogsData = {
     },
     {
       name: 'Charlie',
-      image:
-        'https://cdn.discordapp.com/attachments/809988356611112980/1334952483767849123/image.png?ex=679e66e2&is=679d1562&hm=8670e4cf450bf38ce441955566882c01fba0304e79b2d82b4e8ee4f0ba5ab016&',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1100,
@@ -62,8 +57,7 @@ const dogsData = {
     },
     {
       name: 'Lucy',
-      image:
-        'https://cdn.discordapp.com/attachments/809988356611112980/1334952484250058783/image.png?ex=679e66e2&is=679d1562&hm=69c022cb2439e2c45e3c64f0c090d3b685dbb3514c3ae70099d02e28e3ae8de1&',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1400,
@@ -72,8 +66,7 @@ const dogsData = {
     },
     {
       name: 'Cooper',
-      image:
-        'https://media.discordapp.net/attachments/809988356611112980/1334952484585734296/image.png?ex=679e66e2&is=679d1562&hm=bda9464f88aaec9ef62e22cfc8283b44b9c3b01caa3df8c6cf00228912eb013d&=&width=270&height=270',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1600,
@@ -82,8 +75,7 @@ const dogsData = {
     },
     {
       name: 'Daisy',
-      image:
-        'https://cdn.discordapp.com/attachments/809988356611112980/1334952483377643632/image.png?ex=679e66e2&is=679d1562&hm=256ad66eae5a1f73d17b3d4e509227112f4128494a8b4dd68a973558c96cb0f8&',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 900,
@@ -92,7 +84,7 @@ const dogsData = {
     },
     {
       name: 'Rocky',
-      image: 'https://example.com/dog9.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1250,
@@ -101,7 +93,7 @@ const dogsData = {
     },
     {
       name: 'Molly',
-      image: 'https://example.com/dog10.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1350,
@@ -110,7 +102,7 @@ const dogsData = {
     },
     {
       name: 'Bear',
-      image: 'https://example.com/dog11.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1150,
@@ -119,7 +111,7 @@ const dogsData = {
     },
     {
       name: 'Sadie',
-      image: 'https://example.com/dog12.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1450,
@@ -128,7 +120,7 @@ const dogsData = {
     },
     {
       name: 'Duke',
-      image: 'https://example.com/dog13.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1550,
@@ -137,7 +129,7 @@ const dogsData = {
     },
     {
       name: 'Lola',
-      image: 'https://example.com/dog14.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 950,
@@ -146,7 +138,7 @@ const dogsData = {
     },
     {
       name: 'Zeus',
-      image: 'https://example.com/dog15.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1300,
@@ -155,7 +147,7 @@ const dogsData = {
     },
     {
       name: 'Maggie',
-      image: 'https://example.com/dog16.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1400,
@@ -164,7 +156,7 @@ const dogsData = {
     },
     {
       name: 'Jack',
-      image: 'https://example.com/dog17.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1200,
@@ -173,7 +165,7 @@ const dogsData = {
     },
     {
       name: 'Sophie',
-      image: 'https://example.com/dog18.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1500,
@@ -182,7 +174,7 @@ const dogsData = {
     },
     {
       name: 'Toby',
-      image: 'https://example.com/dog19.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1600,
@@ -191,7 +183,7 @@ const dogsData = {
     },
     {
       name: 'Chloe',
-      image: 'https://example.com/dog20.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 1000,
@@ -200,7 +192,7 @@ const dogsData = {
     },
     {
       name: 'Oscar',
-      image: 'https://example.com/dog21.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1250,
@@ -209,7 +201,7 @@ const dogsData = {
     },
     {
       name: 'Ruby',
-      image: 'https://example.com/dog22.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1350,
@@ -218,7 +210,7 @@ const dogsData = {
     },
     {
       name: 'Riley',
-      image: 'https://example.com/dog23.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1150,
@@ -227,7 +219,7 @@ const dogsData = {
     },
     {
       name: 'Coco',
-      image: 'https://example.com/dog24.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1450,
@@ -236,7 +228,7 @@ const dogsData = {
     },
     {
       name: 'Teddy',
-      image: 'https://example.com/dog25.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1550,
@@ -245,7 +237,7 @@ const dogsData = {
     },
     {
       name: 'Lily',
-      image: 'https://example.com/dog26.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 950,
@@ -254,7 +246,7 @@ const dogsData = {
     },
     {
       name: 'Winston',
-      image: 'https://example.com/dog27.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1300,
@@ -263,7 +255,7 @@ const dogsData = {
     },
     {
       name: 'Zoe',
-      image: 'https://example.com/dog28.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1400,
@@ -272,7 +264,7 @@ const dogsData = {
     },
     {
       name: 'Oliver',
-      image: 'https://example.com/dog29.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1200,
@@ -281,7 +273,7 @@ const dogsData = {
     },
     {
       name: 'Stella',
-      image: 'https://example.com/dog30.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1500,
@@ -290,7 +282,7 @@ const dogsData = {
     },
     {
       name: 'Leo',
-      image: 'https://example.com/dog31.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1600,
@@ -299,7 +291,7 @@ const dogsData = {
     },
     {
       name: 'Rosie',
-      image: 'https://example.com/dog32.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 1000,
@@ -308,7 +300,7 @@ const dogsData = {
     },
     {
       name: 'Milo',
-      image: 'https://example.com/dog33.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1250,
@@ -317,7 +309,7 @@ const dogsData = {
     },
     {
       name: 'Lulu',
-      image: 'https://example.com/dog34.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1350,
@@ -326,7 +318,7 @@ const dogsData = {
     },
     {
       name: 'Louie',
-      image: 'https://example.com/dog35.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1150,
@@ -335,7 +327,7 @@ const dogsData = {
     },
     {
       name: 'Penny',
-      image: 'https://example.com/dog36.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1450,
@@ -344,7 +336,7 @@ const dogsData = {
     },
     {
       name: 'Gus',
-      image: 'https://example.com/dog37.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1550,
@@ -353,7 +345,7 @@ const dogsData = {
     },
     {
       name: 'Nala',
-      image: 'https://example.com/dog38.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 950,
@@ -362,7 +354,7 @@ const dogsData = {
     },
     {
       name: 'Henry',
-      image: 'https://example.com/dog39.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1300,
@@ -371,7 +363,7 @@ const dogsData = {
     },
     {
       name: 'Ellie',
-      image: 'https://example.com/dog40.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1400,
@@ -380,7 +372,7 @@ const dogsData = {
     },
     {
       name: 'Finn',
-      image: 'https://example.com/dog41.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1200,
@@ -389,7 +381,7 @@ const dogsData = {
     },
     {
       name: 'Mia',
-      image: 'https://example.com/dog42.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1500,
@@ -398,7 +390,7 @@ const dogsData = {
     },
     {
       name: 'Murphy',
-      image: 'https://example.com/dog43.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1600,
@@ -407,7 +399,7 @@ const dogsData = {
     },
     {
       name: 'Roxy',
-      image: 'https://example.com/dog44.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 1000,
@@ -416,7 +408,7 @@ const dogsData = {
     },
     {
       name: 'Sam',
-      image: 'https://example.com/dog45.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1250,
@@ -425,7 +417,7 @@ const dogsData = {
     },
     {
       name: 'Layla',
-      image: 'https://example.com/dog46.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1350,
@@ -434,7 +426,7 @@ const dogsData = {
     },
     {
       name: 'Jax',
-      image: 'https://example.com/dog47.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1150,
@@ -443,7 +435,7 @@ const dogsData = {
     },
     {
       name: 'Abby',
-      image: 'https://example.com/dog48.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1450,
@@ -452,7 +444,7 @@ const dogsData = {
     },
     {
       name: 'Marley',
-      image: 'https://example.com/dog49.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1550,
@@ -461,7 +453,7 @@ const dogsData = {
     },
     {
       name: 'Hazel',
-      image: 'https://example.com/dog50.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 950,
@@ -470,7 +462,7 @@ const dogsData = {
     },
     {
       name: 'Apollo',
-      image: 'https://example.com/dog51.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1300,
@@ -479,7 +471,7 @@ const dogsData = {
     },
     {
       name: 'Ginger',
-      image: 'https://example.com/dog52.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1400,
@@ -488,7 +480,7 @@ const dogsData = {
     },
     {
       name: 'Bruno',
-      image: 'https://example.com/dog53.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1200,
@@ -497,7 +489,7 @@ const dogsData = {
     },
     {
       name: 'Willow',
-      image: 'https://example.com/dog54.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1500,
@@ -506,7 +498,7 @@ const dogsData = {
     },
     {
       name: 'Thor',
-      image: 'https://example.com/dog55.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1600,
@@ -515,7 +507,7 @@ const dogsData = {
     },
     {
       name: 'Piper',
-      image: 'https://example.com/dog56.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 1000,
@@ -524,7 +516,7 @@ const dogsData = {
     },
     {
       name: 'Blue',
-      image: 'https://example.com/dog57.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1250,
@@ -533,7 +525,7 @@ const dogsData = {
     },
     {
       name: 'Athena',
-      image: 'https://example.com/dog58.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1350,
@@ -542,7 +534,7 @@ const dogsData = {
     },
     {
       name: 'King',
-      image: 'https://example.com/dog59.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1150,
@@ -551,7 +543,7 @@ const dogsData = {
     },
     {
       name: 'Harley',
-      image: 'https://example.com/dog60.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1450,
@@ -560,7 +552,7 @@ const dogsData = {
     },
     {
       name: 'Dexter',
-      image: 'https://example.com/dog61.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1550,
@@ -569,7 +561,7 @@ const dogsData = {
     },
     {
       name: 'Sasha',
-      image: 'https://example.com/dog62.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 950,
@@ -578,7 +570,7 @@ const dogsData = {
     },
     {
       name: 'Rusty',
-      image: 'https://example.com/dog63.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1300,
@@ -587,7 +579,7 @@ const dogsData = {
     },
     {
       name: 'Lucky',
-      image: 'https://example.com/dog64.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1400,
@@ -596,7 +588,7 @@ const dogsData = {
     },
     {
       name: 'Shadow',
-      image: 'https://example.com/dog65.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1200,
@@ -605,7 +597,7 @@ const dogsData = {
     },
     {
       name: 'Belle',
-      image: 'https://example.com/dog66.jpg',
+      image: '',
       gender: 'Female',
       color: 'Black',
       price: 1500,
@@ -614,7 +606,7 @@ const dogsData = {
     },
     {
       name: 'Apollo',
-      image: 'https://example.com/dog67.jpg',
+      image: '',
       gender: 'Male',
       color: 'Apricot',
       price: 1600,
@@ -623,7 +615,7 @@ const dogsData = {
     },
     {
       name: 'Dolly',
-      image: 'https://example.com/dog68.jpg',
+      image: '',
       gender: 'Female',
       color: 'Red',
       price: 1000,
@@ -632,7 +624,7 @@ const dogsData = {
     },
     {
       name: 'Simba',
-      image: 'https://example.com/dog69.jpg',
+      image: '',
       gender: 'Male',
       color: 'Black and White',
       price: 1250,
@@ -641,7 +633,7 @@ const dogsData = {
     },
     {
       name: 'Minnie',
-      image: 'https://example.com/dog70.jpg',
+      image: '',
       gender: 'Female',
       color: 'Silver',
       price: 1350,
@@ -650,7 +642,7 @@ const dogsData = {
     },
     {
       name: 'Bandit',
-      image: 'https://example.com/dog71.jpg',
+      image: '',
       gender: 'Male',
       color: 'Tan',
       price: 1150,
