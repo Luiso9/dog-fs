@@ -8,6 +8,7 @@
     <img
       class="mb-2 h-auto w-auto rounded-xl object-cover"
       :src="cardProps.imageSrc"
+      loading="lazy"
       :alt="cardProps.imageAlt"
     />
     <div class="flex flex-col gap-1 pt-2">

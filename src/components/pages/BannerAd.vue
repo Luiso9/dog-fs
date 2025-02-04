@@ -12,14 +12,14 @@
     </div>
 
     <div class="renten pb-6">
-      <ol class="flex flex-row gap-5 justify-around">
-        <li><img src="https://placehold.co/150x150" alt=""></li>
-        <li><img src="https://placehold.co/150x150" alt=""></li>
-        <li><img src="https://placehold.co/150x150" alt=""></li>
-        <li><img src="https://placehold.co/150x150" alt=""></li>
-        <li><img src="https://placehold.co/150x150" alt=""></li>
-        <li><img src="https://placehold.co/150x150" alt=""></li>
-        <li><img src="https://placehold.co/150x150" alt=""></li>
+      <ol class="flex flex-row justify-around gap-5">
+        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
+        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
+        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
+        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
+        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
+        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
+        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
       </ol>
     </div>
 
@@ -44,7 +44,7 @@
       </div>
 
       <!-- Image -->
-      <img src="@/assets/perikanan/hand_ad.png" alt="Woman holding a puppy" class="woman" />
+      <img src="@/assets/perikanan/hand_ad.png" alt="Woman holding a puppy" class="woman" loading="lazy" />
     </div>
   </div>
 </template>

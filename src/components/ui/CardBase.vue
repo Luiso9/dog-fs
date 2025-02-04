@@ -1,13 +1,14 @@
 <template>
   <div
     :class="[
-      'bg-neutral-0 max-h-lg z-10 flex h-full flex-col justify-center rounded-xl border border-red-900 p-2 drop-shadow-lg',
+      'bg-neutral-0 max-h-lg z-10 flex h-full flex-col justify-center rounded-xl p-2 drop-shadow-lg',
       widthClass,
     ]"
   >
     <img
       class="h-auto min-h-[240px] w-auto rounded-xl object-cover"
       :src="cardProps.imageSrc"
+      loading="lazy"
       :alt="cardProps.imageAlt"
     />
     <div class="flex flex-col gap-1 p-2 pt-2">

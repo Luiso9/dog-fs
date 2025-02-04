@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="mx-auto flex h-full max-h-[440px] w-screen items-center justify-center bg-gradient-to-r from-[#FCEED5] via-[#FCEED5] to-[#FFE7BA]"
+    class="mx-auto flex h-full max-h-[440px] w-screen items-center justify-center mt-16 bg-gradient-to-r from-[#FCEED5] via-[#FCEED5] to-[#FFE7BA]"
   >
     <div class="top_layer pt-20 pb-10">
       <div

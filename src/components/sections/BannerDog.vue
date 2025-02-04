@@ -35,6 +35,7 @@
       <div class="inu mx-0 h-full w-full px-0">
         <img
           src="@/assets/perikanan/Group3.png"
+          loading="lazy"
           alt="Dog in group"
           class="h-full w-full rounded-b-[16px] md:hidden"
         />

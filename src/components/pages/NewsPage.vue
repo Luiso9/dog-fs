@@ -5,7 +5,7 @@
       <h1 class="text-primary-100 text-2xl leading-8 font-bold">Useful Pet Knowledge</h1>
     </div>
     <div
-      class="flex h-full w-auto flex-col items-center gap-3 overflow-hidden pb-2 lg:flex lg:flex-row lg:min-w-full"
+      class="flex h-full w-auto flex-col items-center gap-3 overflow-hidden pb-2 lg:flex lg:min-w-full lg:flex-row"
     >
       <CardBase
         v-for="dog in displayedDogs"
@@ -18,7 +18,10 @@
         :label="{ text: 'Pet Knowledge' }"
       />
     </div>
-    <ButtonBase :right-icon="ArrowLongRightIcon" :intent="'text'" class="mx-auto mt-5 mb-10 w-full"
+    <ButtonBase
+      :right-icon="ArrowLongRightIcon"
+      :intent="'text'"
+      class="hidden-on-large-screen mx-auto mt-5 mb-10 w-full"
       >View More</ButtonBase
     >
   </div>
@@ -42,3 +45,11 @@ const displayedDogs = computed(() => {
 })
 console.log(displayedDogs)
 </script>
+
+<style scoped>
+@media (min-width: 768px) {
+  .hidden-on-large-screen {
+    display: none;
+  }
+}
+</style>

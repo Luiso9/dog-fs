@@ -11,7 +11,7 @@
           <img src="@/assets/perikanan/Frame.svg" alt="Logo" class="h-auto w-full max-w-lg" />
         </a>
         <li><router-link to="/">Home</router-link></li>
-        <li @mouseover="active = true" @mouseleave="active = false">
+        <li @mouseover="active = true" @mouseleave="handleMouseLeave">
           <router-link to="/page">Category</router-link>
           <transition name="fade">
             <span class="z-50" v-if="active">
@@ -77,6 +77,12 @@ const dropdownOptions = [
 
 const handleDropdownChange = (value) => {
   console.log('Selected value:', value)
+}
+
+const handleMouseLeave = () => {
+  setTimeout(() => {
+    active.value = false
+  }, 500)
 }
 </script>
 
