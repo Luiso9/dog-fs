@@ -39,7 +39,7 @@
       <div class="finale flex w-full justify-between pt-10 leading-6 text-neutral-100">
         <ul class="text-neutral-60 inline-flex gap-52 text-sm">
           <li>© 2022 Monito. All rights reserved.</li>
-          <img src="@/assets/perikanan/frame.svg" alt="" />
+          <img src="../../assets/perikanan/Frame.svg" alt="" />
           <li>Terms of Service <span class="ml-3"> Privacy Policy </span></li>
         </ul>
       </div>
