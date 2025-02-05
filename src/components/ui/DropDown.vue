@@ -1,12 +1,19 @@
 <template>
-  <div class="" ref="dropdownRef">
+  <div ref="dropdownRef">
     <div class="dropdown relative inline-block">
       <button
         class="flex w-auto cursor-pointer items-center justify-around rounded-full py-2 pr-3 pl-4 focus:border-[#00A7E7]"
         @click="toggleDropdown"
         :class="borderClass"
       >
-        <span class="truncate">{{ selectedLabel }}</span>
+        <img
+          v-if="selectedLabel.img"
+          :src="selectedLabel.img"
+          alt="Selected Option"
+          class="mx-2 size-5"
+        />
+        <span class="truncate">{{ selectedLabel.label }}</span>
+
         <component
           :is="isOpen ? ChevronUpIcon : ChevronDownIcon"
           class="mx-1 size-3 font-bold transition-transform duration-200"
@@ -20,10 +27,11 @@
         <li
           v-for="option in options"
           :key="option.value"
-          class="cursor-pointer pt-2.5 pb-2 pl-5 first:rounded-t-2xl last:rounded-b-2xl hover:bg-[#EBEEEF] hover:text-[#00171f]"
+          class="flex cursor-pointer items-center pt-2.5 pb-2 pl-5 first:rounded-t-2xl last:rounded-b-2xl hover:bg-[#EBEEEF] hover:text-[#00171f]"
           :class="{ 'bg-primary-100 text-neutral-0': option.value === selected }"
           @click="selectOption(option)"
         >
+          <img v-if="option.img" :src="option.img" alt="Option Image" class="mr-2 size-5" />
           <span v-html="option.label"></span>
         </li>
       </ul>
@@ -58,7 +66,9 @@ const dropdownRef = ref(null)
 
 const selectedLabel = computed(() => {
   const selectedOption = props.options.find((option) => option.value === props.selected)
-  return selectedOption ? selectedOption.label : 'Select an option'
+  return selectedOption
+    ? { label: selectedOption.label, img: selectedOption.img || null }
+    : { label: 'Select an option', img: null }
 })
 
 const borderClass = computed(() => {
@@ -89,9 +99,3 @@ onUnmounted(() => {
   document.removeEventListener('click', handleClickOutside)
 })
 </script>
-
-<style scoped>
-ul {
-  z-index: 200;
-}
-</style>

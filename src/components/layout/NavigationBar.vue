@@ -43,11 +43,7 @@
           :options="dropdownOptions"
           @change="handleDropdownChange"
           class="w-auto border-none"
-        >
-          <template #label="{ selectedValue }">
-            {{ selectedValue ? `Selected: ${selectedValue}` : 'VND' }}
-          </template>
-        </DropDown>
+        />
       </div>
       <!-- Icon Only -->
       <div class="icon-only mx-auto h-auto w-auto items-center gap-2 p-8 lg:hidden">
@@ -70,9 +66,21 @@ const selectedValue = ref('vnd')
 const active = ref(false)
 
 const dropdownOptions = [
-  { value: 'vnd', label: 'VND' },
-  { value: 'eng', label: 'ENG' },
-  { value: 'id', label: 'ID' },
+  {
+    value: 'vnd',
+    label: 'VND',
+    img: 'src/assets/locale/vnd.png',
+  },
+  {
+    value: 'eng',
+    label: 'USD',
+    img: 'src/assets/locale/us.svg',
+  },
+  {
+    value: 'id',
+    label: 'IDR',
+    img: 'src/assets/locale/ind.png',
+  },
 ]
 
 const handleDropdownChange = (value) => {

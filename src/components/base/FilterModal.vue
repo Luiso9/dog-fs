@@ -6,9 +6,9 @@
     <div class="w-9/10 rounded-lg bg-white p-6 lg:w-1/3">
       <div class="mb-4 flex items-center justify-between">
         <h2 class="text-primary-100 text-2xl font-bold">Filter</h2>
-        <span @click="$emit('close-modal')" class="text-gray-500">
-          <XMarkIcon size="4" />
-        </span>
+        <button @click="$emit('close-modal')" class="cursor-pointer text-xl text-gray-500">
+          X
+        </button>
       </div>
 
       <!-- Filter Options -->
@@ -125,7 +125,6 @@
 <script setup>
 import { useDogStore } from '@/store/dogStore'
 import CheckBox from './CheckBox.vue'
-import { XMarkIcon } from '@heroicons/vue/24/outline'
 import InputPrice from './InputPrice.vue'
 
 const dogStore = useDogStore()
