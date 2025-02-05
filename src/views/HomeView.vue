@@ -14,7 +14,7 @@ import ProductPage from '@/components/pages/ProductPage.vue'
 <template>
   <header class="bg-gradient-to-l from-[#FCEED5] via-[#FCEED5] to-[#FFE7BA]">
     <NavigationBar class="hidden md:flex lg:block" />
-    <MobileNavbar class="md:hidden lg:hidden" />
+    <MobileNavbar class="flex md:hidden lg:hidden" />
   </header>
   <main>
     <LandingPage />

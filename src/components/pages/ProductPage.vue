@@ -54,7 +54,6 @@ import { ArrowLongRightIcon } from '@heroicons/vue/24/outline'
 
 const placeholderImage = 'https://placehold.co/400'
 
-// List of images in assets/product
 import img1 from '@/assets/product/image 2-1.png'
 import img2 from '@/assets/product/image 2-2.png'
 import img3 from '@/assets/product/image 2-3.png'

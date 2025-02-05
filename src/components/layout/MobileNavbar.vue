@@ -15,12 +15,8 @@
               <li class="cursor-pointer px-4 py-2 text-center hover:bg-gray-200">
                 <RouterLink to="/product"> Categories </RouterLink>
               </li>
-              <li class="cursor-pointer px-4 py-2 text-center hover:bg-gray-200">
-                <RouterLink> About </RouterLink>
-              </li>
-              <li class="cursor-pointer px-4 py-2 text-center hover:bg-gray-200">
-                <RouterLink> Contact </RouterLink>
-              </li>
+              <li class="cursor-pointer px-4 py-2 text-center hover:bg-gray-200">About</li>
+              <li class="cursor-pointer px-4 py-2 text-center hover:bg-gray-200">Contact</li>
             </ul>
           </div>
         </div>
