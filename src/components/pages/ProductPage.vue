@@ -15,9 +15,9 @@
       class="grid h-auto w-auto grid-cols-2 place-items-center items-center gap-3 truncate px-4 pb-5 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-7"
     >
       <CompactCard
-        v-for="dog in produc.slice(0, 4)"
+        v-for="(dog, index) in produc.slice(0, 4)"
         :key="dog.name"
-        :imageSrc="dog.image || placeholderImage"
+        :imageSrc="images[index] || placeholderImage"
         :imageAlt="dog.name"
         :title="dog.name.length > 20 ? dog.name.substring(0, 17) + '...' : dog.name"
         :gender="dog.product"
@@ -26,9 +26,9 @@
         :label="{ text: dog.label }"
       />
       <CompactCard
-        v-for="dog in produc.slice(4, 8)"
+        v-for="(dog, index) in produc.slice(4, 8)"
         :key="dog.name"
-        :imageSrc="dog.image || placeholderImage"
+        :imageSrc="images[index + 4] || placeholderImage"
         :imageAlt="dog.name"
         :title="dog.name.length > 20 ? dog.name.substring(0, 17) + '...' : dog.name"
         :gender="dog.product"
@@ -53,6 +53,18 @@ import ButtonBase from '../base/ButtonBase.vue'
 import { ArrowLongRightIcon } from '@heroicons/vue/24/outline'
 
 const placeholderImage = 'https://placehold.co/400'
+
+// List of images in assets/product
+import img1 from '@/assets/product/image 2-1.png'
+import img2 from '@/assets/product/image 2-2.png'
+import img3 from '@/assets/product/image 2-3.png'
+import img4 from '@/assets/product/image 2-4.png'
+import img5 from '@/assets/product/image 2-5.png'
+import img6 from '@/assets/product/image 2-6.png'
+import img7 from '@/assets/product/image 2-7.png'
+import img8 from '@/assets/product/image 2.png'
+
+const images = [img1, img2, img3, img4, img5, img6, img7, img8]
 
 const produc = ref(product.products)
 </script>

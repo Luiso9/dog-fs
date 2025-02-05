@@ -1,7 +1,7 @@
 <template>
   <button
     v-if="!btnProps.hidden"
-    class="group inline-flex max-h-[48px] max-w-auto items-center justify-center rounded-full text-base transition-transform duration-300 ease-in-out hover:cursor-pointer"
+    class="group inline-flex max-h-[48px] max-w-auto items-center justify-center rounded-full text-base transition-transform duration-300 ease-in-out cursor-pointer"
     :class="[
       btnProps.iconOnly ? 'h-12 w-12' : 'px-7 py-3.5',
       {

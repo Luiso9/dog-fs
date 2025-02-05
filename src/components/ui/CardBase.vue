@@ -6,7 +6,7 @@
     ]"
   >
     <img
-      class="h-auto min-h-[240px] w-auto rounded-xl object-cover"
+      class="h-[200px] w-auto rounded-xl object-cover"
       :src="cardProps.imageSrc"
       loading="lazy"
       :alt="cardProps.imageAlt"
@@ -16,9 +16,11 @@
         v-if="cardProps.label"
         class="bg-state-blue flex h-auto w-fit items-center rounded-full text-neutral-100"
       >
-        <span class="text-neutral-0 px-2.5 py-0.5 text-xs">{{ cardProps.label.text }}</span>
+        <span class="title text-neutral-0 px-2.5 py-0.5 text-xs">{{
+          cardProps.label.text
+        }}</span>
       </div>
-      <h1 class="text-start font-[Gilroy-Bold] text-lg">{{ cardProps.title }}</h1>
+      <h1 class="text-start font-[Gilroy-Bold] line-clamp-1 text-lg">{{ cardProps.title }}</h1>
       <div class="flex flex-col gap-2 text-base text-neutral-100 md:flex-row lg:flex-row">
         <span class="description line-clamp-4">{{ cardProps.desc }}</span>
       </div>

@@ -10,7 +10,7 @@
           </div>
           <div class="group_2 flex flex-col items-center gap-y-3 rounded-[14px] bg-white p-3">
             <InputFields :placeholder="'Enter your email'" class="h-full w-full" />
-            <ButtonBase class="h-auto rounded-lg">Subscribe Now</ButtonBase>
+            <ButtonBase class="h-auto w-full rounded-lg">Subscribe Now</ButtonBase>
           </div>
         </div>
 
@@ -22,10 +22,10 @@
             <li>Contact</li>
           </ul>
           <ul class="inline-flex items-center justify-center gap-10">
-            <li><MoonIcon class="size-5" /></li>
-            <li><MoonIcon class="size-5" /></li>
-            <li><MoonIcon class="size-5" /></li>
-            <li><MoonIcon class="size-5" /></li>
+            <li><FontAwesomeIcon :icon="faFacebook" /></li>
+            <li><FontAwesomeIcon :icon="faTwitter" /></li>
+            <li><FontAwesomeIcon :icon="faInstagram" /></li>
+            <li><FontAwesomeIcon :icon="faYoutube" /></li>
           </ul>
         </div>
 
@@ -47,6 +47,7 @@
 
 <script setup>
 import ButtonBase from '../base/ButtonBase.vue'
-import { MoonIcon } from '@heroicons/vue/24/solid'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faInstagram, faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import InputFields from '../base/InputFields.vue'
 </script>

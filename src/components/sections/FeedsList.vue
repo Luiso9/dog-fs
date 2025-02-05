@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="px-4 md:container md:mx-auto">
     <div class="dropdown flex items-center justify-between lg:hidden">
       <DropDown
         v-model:selected="dogStore.selectedOption"
@@ -9,58 +9,114 @@
         :border="true"
       />
 
-      <span class="text-primary-100 flex items-center gap-2 text-xl font-bold">
+      <span
+        class="text-primary-100 flex items-center gap-2 text-xl font-bold cursor-pointer"
+        @click="modalFilter = true"
+      >
         <FunnelIcon class="size-7" />
         Filter
       </span>
     </div>
 
-    <div class="mt-8 mb-5 hidden flex-wrap items-baseline justify-between lg:flex">
-      <div class="flex w-full flex-col md:w-1/4">
+    <!-- Modal -->
+    <FilterModal :modalFilter="modalFilter" @close-modal="modalFilter = false" />
+
+    <div class="mt-8 mb-5 flex flex-wrap items-baseline justify-between lg:flex">
+      <div class="hidden w-full flex-col md:hidden lg:flex lg:w-1/4">
         <h1 class="text-primary-100 text-2xl font-bold">Filter</h1>
-        <div class="Filter mt-4">
-          <ul>
-            <h3>Gender</h3>
+        <div class="Filter mt-4 w-3/4 text-neutral-100">
+          <ul class="flex flex-col gap-2">
+            <h3 class="text-lg font-bold">Gender</h3>
+            <li>
+              <CheckBox v-model="dogStore.filters.selectedGender" value="Male">Male</CheckBox>
+            </li>
+            <li>
+              <CheckBox v-model="dogStore.filters.selectedGender" value="Female">FeMale</CheckBox>
+            </li>
+            <hr class="text-neutral-10 my-4" />
+          </ul>
+          <ul class="flex flex-col gap-2">
+            <h3 class="text-lg font-bold">Color</h3>
             <li>
               <CheckBox
-                :checked="dogStore.filters.selectedGender.includes('Male')"
-                @change="dogStore.filters.selectedGender.push('Male')"
+                v-model="dogStore.filters.selectedColor"
+                :bg-color="'bg-state-pink'"
+                :hidden="false"
+                :value="'Red'"
               >
-                Male
-              </CheckBox>
+                Red</CheckBox
+              >
             </li>
             <li>
               <CheckBox
-                :checked="dogStore.filters.selectedGender.includes('Female')"
-                @change="dogStore.filters.selectedGender.push('Female')"
+                v-model="dogStore.filters.selectedColor"
+                :bg-color="'bg-state-orange'"
+                :hidden="false"
+                :value="'Apricot'"
               >
-                Female
+                Apricot</CheckBox
+              >
+            </li>
+            <li>
+              <CheckBox
+                v-model="dogStore.filters.selectedColor"
+                :bg-color="'bg-neutral-80'"
+                :hidden="false"
+                :value="'Black'"
+              >
+                Black</CheckBox
+              >
+            </li>
+            <li>
+              <CheckBox
+                v-model="dogStore.filters.selectedColor"
+                :bg-color="'bg-neutral-10'"
+                :hidden="false"
+                :value="'Black & White'"
+              >
+                Black & White</CheckBox
+              >
+            </li>
+            <li>
+              <CheckBox
+                v-model="dogStore.filters.selectedColor"
+                :bg-color="'bg-[#CECECE]'"
+                :hidden="false"
+                :value="'Silver'"
+              >
+                Silver</CheckBox
+              >
+            </li>
+            <li>
+              <CheckBox
+                v-model="dogStore.filters.selectedColor"
+                :bg-color="'bg-[#FFF7CE]'"
+                :hidden="false"
+                :value="'Tan'"
+              >
+                Tan</CheckBox
+              >
+            </li>
+            <hr class="text-neutral-10 my-4" />
+          </ul>
+          <ul class="flex flex-col">
+            <h3 class="text-lg font-bold">Price</h3>
+            <span class="flex flex-row flex-wrap">
+              <InputPrice v-model="dogStore.filters.selectedPrice" />
+            </span>
+            <hr class="text-neutral-10 my-4" />
+          </ul>
+          <ul class="flex flex-col gap-2">
+            <h3 class="text-lg font-bold">Breed</h3>
+            <li v-for="breed in ['Small', 'Medium', 'Large']" :key="breed">
+              <CheckBox v-model="dogStore.filters.selectedBreed" :value="breed">
+                {{ breed }}
               </CheckBox>
             </li>
-          </ul>
-          <ul>
-            <h3>Color</h3>
-            <li>Red</li>
-            <li>Apricot</li>
-            <li>Black</li>
-            <li>Black & White</li>
-            <li>Silver</li>
-            <li>Tan</li>
-          </ul>
-          <ul class="flex flex-row">
-            <h3>Price</h3>
-            <li>Min</li>
-            <li>Max</li>
-          </ul>
-          <ul>
-            <h3>Breed</h3>
-            <li>Small</li>
-            <li>Medium</li>
-            <li>Large</li>
           </ul>
         </div>
       </div>
-      <div class="flex w-full flex-col md:w-3/4">
+      <div class="flex w-full flex-col lg:w-3/4">
         <div class="flex flex-row items-center justify-between">
           <div class="flex flex-row items-baseline gap-2">
             <h1 class="text-primary-100 text-2xl font-bold">Small Dog</h1>
@@ -70,7 +126,7 @@
             v-model:selected="dogStore.selectedOption"
             :options="dogStore.sortOptions"
             @update:selected="dogStore.sortDogs"
-            class="z-50 w-auto"
+            class="z-50 hidden w-auto lg:flex"
             :border="true"
           />
         </div>
@@ -94,7 +150,7 @@
     <PaginationPage
       :totalPages="dogStore.totalPages"
       :currentPage="dogStore.currentPage"
-      @update:currentPage="dogStore.currentPage = dogStore.totalPages"
+      @update:currentPage="dogStore.currentPage = $event"
     />
   </div>
 </template>
@@ -103,15 +159,24 @@
 import CompactCard from '@/components/ui/CompactCard.vue'
 import { FunnelIcon } from '@heroicons/vue/24/outline'
 import DropDown from '../ui/DropDown.vue'
+import InputPrice from '../base/InputPrice.vue'
 import { useDogStore } from '@/store/dogStore'
 import PaginationPage from '../base/PaginationPage.vue'
 import CheckBox from '../base/CheckBox.vue'
+import { ref } from 'vue'
+import FilterModal from '../base/FilterModal.vue'
+
+const modalFilter = ref(false)
 
 const dogStore = useDogStore()
 </script>
 
 <style scoped>
 ul {
+  z-index: 99;
+}
+
+.modal {
   z-index: 9999;
 }
 </style>

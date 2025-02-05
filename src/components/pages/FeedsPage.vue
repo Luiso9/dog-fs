@@ -63,7 +63,7 @@ import CompactCard from '@/components/ui/CompactCard.vue'
 import ButtonBase from '../base/ButtonBase.vue'
 import { ArrowLongRightIcon } from '@heroicons/vue/24/outline'
 
-const placeholderImage = 'https://placehold.co/400'
+const placeholderImage = 'https://picsum.photos/seed/dogs/500/500'
 
 const dogs = ref(dogsData.dogs)
 </script>

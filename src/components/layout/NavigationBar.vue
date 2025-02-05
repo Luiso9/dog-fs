@@ -12,14 +12,14 @@
         </a>
         <li><router-link to="/">Home</router-link></li>
         <li @mouseover="active = true" @mouseleave="handleMouseLeave">
-          <router-link to="/page">Category</router-link>
+          <router-link to="/product">Category</router-link>
           <transition name="fade">
             <span class="z-50" v-if="active">
               <MegaMenu />
             </span>
           </transition>
         </li>
-        <li>About</li>
+        <router-link to="/about">Category</router-link>
         <li>Contact</li>
       </ul>
       <!-- Default -->

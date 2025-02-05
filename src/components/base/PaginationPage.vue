@@ -8,7 +8,7 @@
         v-for="page in pages"
         :key="page"
         :class="[
-          'w-fit rounded-xl px-3.5 py-1.5',
+          'w-fit rounded-xl px-3.5 py-1.5 cursor-pointer',
           { 'active bg-primary-100 text-neutral-0': page === currentPage },
         ]"
         @click="changePage(page)"

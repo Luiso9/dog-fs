@@ -29,3 +29,5 @@ import ProductPage from '@/components/pages/ProductPage.vue'
   <FooterBase class="hidden lg:flex" />
   <MobileFooter class="md:block lg:hidden" />
 </template>
+
+

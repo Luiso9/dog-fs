@@ -2,11 +2,22 @@ import { defineStore } from 'pinia'
 import { computed, reactive, ref, watch, onMounted } from 'vue'
 import dogsData from '@/assets/perkapalan/dogs.js'
 
+/**
+ * Store for managing dog data and filters.
+ *
+ * @typedef {Object} Filters
+ * @property {Array<string>} selectedGender - Selected genders to filter by.
+ * @property {string} selectedBreed - Selected breed to filter by.
+ * @property {string} selectedColor - Selected color to filter by.
+ * @property {Object} selectedPrice - Selected price range to filter by.
+ * @property {number|null} selectedPrice.min - Minimum price.
+ * @property {number|null} selectedPrice.max - Maximum price.
+ *
+ */
+
 export const useDogStore = defineStore('dogStore', () => {
   const dogs = ref([...dogsData.dogs])
   const loading = ref(false)
-
-  // console.log(dogs.value)
 
   const filters = reactive({
     selectedGender: [],

@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="mx-auto flex h-full max-h-[440px] w-screen items-center justify-center mt-16 bg-gradient-to-r from-[#FCEED5] via-[#FCEED5] to-[#FFE7BA]"
+    class="mx-auto mt-16 flex h-full max-h-[440px] w-screen items-center justify-center bg-gradient-to-r from-[#FCEED5] via-[#FCEED5] to-[#FFE7BA]"
   >
     <div class="top_layer pt-20 pb-10">
       <div
@@ -27,10 +27,10 @@
           <li>Contact</li>
         </ul>
         <ul class="inline-flex items-center gap-10">
-          <li><MoonIcon class="size-5" /></li>
-          <li><MoonIcon class="size-5" /></li>
-          <li><MoonIcon class="size-5" /></li>
-          <li><MoonIcon class="size-5" /></li>
+          <li><FontAwesomeIcon :icon="faFacebook" /></li>
+          <li><FontAwesomeIcon :icon="faTwitter" /></li>
+          <li><FontAwesomeIcon :icon="faInstagram" /></li>
+          <li><FontAwesomeIcon :icon="faYoutube" /></li>
         </ul>
       </div>
 
@@ -50,5 +50,6 @@
 <script setup>
 import InputFields from '../base/InputFields.vue'
 import ButtonBase from '../base/ButtonBase.vue'
-import { MoonIcon } from '@heroicons/vue/24/solid'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faInstagram, faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 </script>

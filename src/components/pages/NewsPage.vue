@@ -5,17 +5,31 @@
       <h1 class="text-primary-100 text-2xl leading-8 font-bold">Useful Pet Knowledge</h1>
     </div>
     <div
-      class="flex h-full w-auto flex-col items-center gap-3 overflow-hidden pb-2 lg:flex lg:min-w-full lg:flex-row"
+      class="flex h-full w-auto flex-col items-center gap-3 overflow-hidden pb-2 lg:grid lg:grid-cols-3"
     >
       <CardBase
-        v-for="dog in displayedDogs"
-        :key="dog.name"
-        :imageSrc="'https://placehold.co/300x200'"
-        :imageAlt="dog.name"
+        :imageSrc="'https://picsum.photos/seed/4/300/200'"
         :title="'What is a Pomeranian? How to Identify Pomeranian Dogs'"
         :desc="'The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.'"
         :width="'w-full'"
         :label="{ text: 'Pet Knowledge' }"
+        class="w-full flex-1 flex-shrink-0"
+      />
+      <CardBase
+        :imageSrc="'https://picsum.photos/seed/2/300/200'"
+        :title="'Dog Diet You Need To Know'"
+        :desc="'Dividing a dogs diet may seem simple at first, but there are some rules you should know so that your dog can easily absorb the nutrients in the diet. For those who are just starting to raise dogs, especially newborn puppies with relatively weak resistance. '"
+        :width="'w-full'"
+        :label="{ text: 'Pet Knowledge' }"
+        class="w-full flex-1 flex-shrink-0"
+      />
+      <CardBase
+        :imageSrc="'https://picsum.photos/seed/9/300/200'"
+        :title="'Why Dogs Bite and Destroy Furniture and How to Prevent It Effectively'"
+        :desc="'Dividing a dogs diet may seem simple at first, but there are some rules you should know so that your dog can easily absorb the nutrients in the diet. For those who are just starting to raise dogs, especially newborn puppies with relatively weak resistance. '"
+        :label="{ text: 'Pet Knowledge' }"
+        :width="'w-full'"
+        class="w-full flex-1 flex-shrink-0"
       />
     </div>
     <ButtonBase
@@ -28,22 +42,9 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import dogsData from '@/assets/perkapalan/dogs.js'
 import CardBase from '@/components/ui/CardBase.vue'
 import ButtonBase from '../base/ButtonBase.vue'
 import { ArrowLongRightIcon } from '@heroicons/vue/24/outline'
-
-const dogs = ref(dogsData.dogs)
-
-const displayedDogs = computed(() => {
-  if (window.innerWidth >= 768) {
-    return dogs.value.slice(0, 4)
-  } else {
-    return dogs.value.slice(0, 3)
-  }
-})
-console.log(displayedDogs)
 </script>
 
 <style scoped>

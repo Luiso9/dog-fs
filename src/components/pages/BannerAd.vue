@@ -12,14 +12,63 @@
     </div>
 
     <div class="renten pb-6">
-      <ol class="flex flex-row justify-around gap-5">
-        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
-        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
-        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
-        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
-        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
-        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
-        <li><img src="https://placehold.co/150x150" loading="lazy" alt="" /></li>
+      <ol class="flex flex-row items-center justify-around gap-5">
+        <li>
+          <img
+            src="../../assets/brand/image 4.png"
+            loading="lazy"
+            alt="Brand"
+            class="object-cover object-center"
+          />
+        </li>
+        <li>
+          <img
+            src="../../assets/brand/image 6.png"
+            loading="lazy"
+            alt="Brand"
+            class="object-cover object-center"
+          />
+        </li>
+        <li>
+          <img
+            src="../../assets/brand/image 7.png"
+            loading="lazy"
+            alt="Brand"
+            class="object-cover object-center"
+          />
+        </li>
+        <li>
+          <img
+            src="../../assets/brand/image 8.png"
+            loading="lazy"
+            alt="Brand"
+            class="object-cover object-center"
+          />
+        </li>
+        <li>
+          <img
+            src="../../assets/brand/image 9.png"
+            loading="lazy"
+            alt="Brand"
+            class="object-cover object-center"
+          />
+        </li>
+        <li>
+          <img
+            src="../../assets/brand/image 10.png"
+            loading="lazy"
+            alt="Brand"
+            class="object-cover object-center"
+          />
+        </li>
+        <li>
+          <img
+            src="../../assets/brand/image 11.png"
+            loading="lazy"
+            alt="Brand"
+            class="object-cover object-center"
+          />
+        </li>
       </ol>
     </div>
 
@@ -44,7 +93,12 @@
       </div>
 
       <!-- Image -->
-      <img src="@/assets/perikanan/hand_ad.png" alt="Woman holding a puppy" class="woman" loading="lazy" />
+      <img
+        src="@/assets/perikanan/hand_ad.png"
+        alt="Woman holding a puppy"
+        class="woman"
+        loading="lazy"
+      />
     </div>
   </div>
 </template>
