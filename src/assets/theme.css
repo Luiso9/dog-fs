@@ -1,16 +1,4 @@
-@font-face {
-  font-family: 'Girloy';
-  src: url('./font/SVNGilroy\ Light.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Girloy-Bold';
-  src: url('./font/SVNGilroy\ Bold.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.cdnfonts.com/css/inter');
 
 :root {
   /* Primary Colors */
@@ -200,11 +188,6 @@
   box-shadow: var(--shadow-1);
 }
 
-/* Font */
-.font-svn-gilroy {
-  font-family: var(--font-svn-gilroy);
-}
-
 /* Border Radius */
 .rounded-10 {
   border-radius: var(--rounded-10);
@@ -235,8 +218,4 @@
 }
 .rounded-120 {
   border-radius: var(--rounded-120);
-}
-
-.font-bold {
-  font-family: 'Gilroy-Bold', sans-serif;
 }

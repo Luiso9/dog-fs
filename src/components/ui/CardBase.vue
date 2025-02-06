@@ -20,7 +20,7 @@
           cardProps.label.text
         }}</span>
       </div>
-      <h1 class="text-start font-[Gilroy-Bold] line-clamp-1 text-lg">{{ cardProps.title }}</h1>
+      <h1 class="text-start font-bold line-clamp-1 text-lg">{{ cardProps.title }}</h1>
       <div class="flex flex-col gap-2 text-base text-neutral-100 md:flex-row lg:flex-row">
         <span class="description line-clamp-4">{{ cardProps.desc }}</span>
       </div>

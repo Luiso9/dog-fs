@@ -3,7 +3,7 @@
 
 #app {
   font-weight: normal;
-  font-family: 'Gilroy-Regular', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--neutral-0);
   color: var(--neutral-100);
 }
@@ -21,7 +21,9 @@ nav {
   z-index: 9999;
 }
 
-.blob, .blob1, .blob2 {
+.blob,
+.blob1,
+.blob2 {
   z-index: 0;
 }
 
