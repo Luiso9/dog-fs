@@ -5,7 +5,7 @@
       <h1 class="text-primary-100 text-2xl leading-8 font-bold">Useful Pet Knowledge</h1>
     </div>
     <div
-      class="flex h-full w-auto flex-col items-center gap-3 overflow-hidden pb-2 lg:grid lg:grid-cols-3"
+      class="flex h-full w-auto flex-col items-center gap-3 overflow-hidden pb-2 md:grid md:grid-cols-3"
     >
       <CardBase
         :imageSrc="'https://picsum.photos/seed/4/300/200'"

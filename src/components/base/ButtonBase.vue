@@ -6,11 +6,13 @@
       btnProps.iconOnly ? 'h-12 w-12' : 'px-7 py-3.5',
       {
         'bg-primary-100 text-neutral-0 group-hover:bg-primary-60': btnProps.intent === 'primary',
+        'bg-neutral-0 text-neutral-100': btnProps.intent === 'secondary',
         'bg-neutral-20 text-neutral-60 cursor-not-allowed': btnProps.intent === 'disabled',
         'border-primary-100 text-primary-100 border bg-none group-hover:bg-[var(--primary-60)] group-hover:text-[var(--neutral-10)]':
           btnProps.intent === 'text',
         'bg-black':
           btnProps.intent !== 'primary' &&
+          btnProps.intent !== 'secondary' &&
           btnProps.intent !== 'disabled' &&
           btnProps.intent !== 'text',
       },
@@ -62,7 +64,7 @@ const btnProps = defineProps({
   loading: Boolean,
   intent: {
     type: String,
-    validator: (val) => ['primary', 'disabled', 'text'].includes(val),
+    validator: (val) => ['primary', 'secondary', 'disabled', 'text'].includes(val),
     default: 'primary',
   },
   iconOnly: Boolean,

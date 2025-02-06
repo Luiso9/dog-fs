@@ -1,9 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/inter');
 @import 'tailwindcss';
 @import './theme.css';
 
 #app {
   font-weight: normal;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Gilroy', sans-serif;
   background: var(--neutral-0);
   color: var(--neutral-100);
 }

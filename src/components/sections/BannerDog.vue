@@ -51,7 +51,8 @@
             :intent="'text'"
             >View Intro</ButtonBase
           >
-          <ButtonBase class="h-auto w-auto" :intent="'primary'">Explore Now</ButtonBase>
+          <ButtonBase class="h-auto w-auto lg:hidden" :intent="'primary'">Explore Now</ButtonBase>
+          <ButtonBase class="h-auto w-auto hidden lg:block" :intent="'secondary'">Explore Now</ButtonBase>
         </div>
       </div>
       <div class="inu mx-0 h-full w-full px-0">

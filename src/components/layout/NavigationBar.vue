@@ -69,17 +69,17 @@ const dropdownOptions = [
   {
     value: 'vnd',
     label: 'VND',
-    img: '../../assets/locale/vnd.png',
+    img: '../assets/locale/vnd.png',
   },
   {
     value: 'eng',
     label: 'USD',
-    img: '../../assets/locale/us.svg',
+    img: '../assets/locale/us.svg',
   },
   {
     value: 'id',
     label: 'IDR',
-    img: '../../assets/locale/ind.png',
+    img: '../assets/locale/ind.png',
   },
 ]
 

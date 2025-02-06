@@ -6,7 +6,7 @@
     ]"
   >
     <img
-      class="h-[200px] w-auto rounded-xl object-cover"
+      class="h-fit  w-auto rounded-xl object-cover"
       :src="cardProps.imageSrc"
       loading="lazy"
       :alt="cardProps.imageAlt"
