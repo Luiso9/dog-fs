@@ -19,7 +19,7 @@
             </span>
           </transition>
         </li>
-        <router-link to="/about">Category</router-link>
+        <router-link to="/about">About</router-link>
         <li>Contact</li>
       </ul>
       <!-- Default -->
